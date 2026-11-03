@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-base-700;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-base-900 text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  ::selection {
+    @apply bg-moss-700 text-ink;
+  }
+
+  /* Scrollbar discreta, coerente com o tema */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-base-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-base-700;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-base-600;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-moss-400/70 ring-offset-2 ring-offset-base-900;
+  }
+}
+
+@layer components {
+  .surface {
+    @apply rounded-xl border border-base-700 bg-base-850;
+  }
+}
